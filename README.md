@@ -1,4 +1,4 @@
-# [FocusME](https://github.com/dixflat/FocusME/)
+# FocusME
 Helper script to focus open Linux/X window apps or launch another instance if window is already active or not found. 
 You can forget the hordes of orphaned terminals or myriads of app windows.
 
@@ -6,13 +6,10 @@ It works by querying the open window names/classes for a string, then:
 
 - If found it activates/focuses it.
 - If not found it will launch the specified command.
-- If the window is found and it's active it will launch a new one.
+- If the window is found and it's active it will me minimized.
 
-## Installation / required packages
-1. Install xdotool (apt install xdotool / apk add xdotool)
-2. Copy focusme to /usr/local/bin or somewhere inside your PATH
-3. chmod ug+x /usr/local/bin/focusme
-4. Setup shortcuts in your favorite window manager
+## Required packages
+- Requires [xdotool](https://github.com/jordansissel/xdotool) to work
 
 ## Usage, examples
 ```
@@ -23,8 +20,7 @@ command_to_launch - the command to launch if window not found or already active
 
 focusme terminal xfce4-terminal
 focusme firefox "firefox -P MAIN"
-
 ```
 
-## In action
-![FocusME in action](https://raw.githubusercontent.com/dixflat/focusME/main/focusme_example.gif)
+## Fork info
+This version if forked from the [original repo](https://github.com/dixflatlinr/FocusME) as I didn't like the original behaviour of opening new instance of the window if one is currently focused. This version minimizes the window.
