@@ -95,7 +95,7 @@ shopt -s nocasematch
 #Active window matches NAME or its ID, so launch a new one
 if [[ $WINDOWACTIVECLASS =~ "$NAME" || $WINDOWID_ACTIVE == $WINDOWID ]]
 then
-    launch "$COMMAND"
+    xdotool windowminimize $WINDOWID_ACTIVE
 else
     #highlight a matching window
     xdotool windowactivate $(searchwindow $1 class last)
